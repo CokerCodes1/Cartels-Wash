@@ -1,0 +1,55 @@
+
+.tracking-section {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tracking-sub {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.tracking-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/* MAP */
+.map-box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* STATUS */
+.status-box {
+  padding: 25px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+/* DOT */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #25D366;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .tracking-container {
+    grid-template-columns: 1fr;
+  }
+}

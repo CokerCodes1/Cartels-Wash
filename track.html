@@ -1,0 +1,66 @@
+
+<section class="tracking-section fade-in">
+
+  <h2 class="section-title gradient-text">
+    Live Pickup Tracking
+  </h2>
+
+  <p class="tracking-sub">
+    See your laundry pickup status in real-time across Port Harcourt.
+  </p>
+
+  <div class="tracking-container">
+
+    <!-- MAP -->
+    <div class="map-box glass-card">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127341.219...PortHarcourt"
+        width="100%"
+        height="350"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+    <!-- STATUS PANEL -->
+    <div class="status-box glass-card">
+
+      <h3>Pickup Status</h3>
+
+      <div class="status-dot"></div>
+      <p id="statusText">Driver is heading to your location...</p>
+
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Cartels-Wash,%20I%20want%20to%20track%20my%20pickup"
+         class="cta-btn small">
+
+        Track via WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+const statuses = [
+  "Driver is heading to your location...",
+  "Pickup agent is 5 mins away 🚗",
+  "Laundry has been picked up 🧺",
+  "Washing in progress at facility 🧼",
+  "Quality check completed ✔️",
+  "Out for delivery 🚚"
+];
+
+let index = 0;
+
+setInterval(() => {
+  document.getElementById("statusText").innerText = statuses[index];
+  index = (index + 1) % statuses.length;
+}, 4000);
+
+</script>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartels-Wash</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Cartels-Wash</div>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#promos">Promos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="menu-toggle">&#9776;</div>
+    </div>
+  </header>
+
+
+<section class="hero">
+
+  <!-- 🎬 VIDEO BACKGROUND -->
+  <video class="hero-video" autoplay muted loop playsinline>
+
+    <!-- Replace this with your own hosted video later -->
+    <source src="videos/30704-383980332_medium.mp4" type="video/mp4">
+
+    Your browser does not support the video tag.
+
+  </video>
+
+  <!-- 🌑 DARK OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- ✨ GLOW EFFECT -->
+  <div class="hero-glow"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
+
+
+<h1 class="gradient-text" id="heroTitle">
+  Port Harcourt’s Largest, Most Trusted Laundry Service
+</h1>
+
+    <p class="hero-sub">
+      Experience premium laundry care with fast pickup & delivery.
+      Trusted by hundreds across Port Harcourt for spotless results, speed, and reliability.
+    </p>
+
+    <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Cartels-Wash,%20I%20want%20to%20book%20a%20pickup"
+       class="cta-btn">
+
+      Book a Pickup
+
+    </a>
+
+    <!-- PROMO CARDS (UNCHANGED) -->
+    <div class="hero-promos">
+
+      <div class="promo-card">
+        <h3>🎁 Referral Bonus</h3>
+        <p>Bring 5 customers & get 1GB data + FREE wash</p>
+      </div>
+
+      <div class="promo-card">
+        <h3>👨‍👩‍👧 Family Plans</h3>
+        <p>Save more with our discounted household packages</p>
+      </div>
+
+      <div class="promo-card">
+        <h3>💳 Pay Later</h3>
+        <p>Wash now and pay later with flexible options</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+
+const headlines = [
+  "Port Harcourt’s Largest, Most Trusted Laundry Service",
+  "Premium Laundry Pickup & Delivery at Your Doorstep 🚚",
+  "Fast. Clean. Reliable. Laundry You Can Trust 🧼",
+  "Same-Day Express Wash for Busy Professionals ⚡",
+  "Luxury Fabric Care With Professional Finish ✨"
+];
+
+let index = 0;
+
+setInterval(() => {
+
+  const title = document.getElementById("heroTitle");
+
+  // fade out
+  title.style.opacity = 0;
+  title.style.transform = "translateY(10px)";
+
+  setTimeout(() => {
+
+    index = (index + 1) % headlines.length;
+    title.innerText = headlines[index];
+
+    // fade in
+    title.style.opacity = 1;
+    title.style.transform = "translateY(0px)";
+
+  }, 400);
+
+}, 3500);
+
+</script>
+
+
+<div class="live-feed glass-card">
+
+  <div class="live-dot"></div>
+  <p id="liveText">Someone just booked a pickup in GRA, Port Harcourt</p>
+
+</div>
+<script>
+const messages = [
+  "Someone just booked a pickup in GRA, Port Harcourt",
+  "New order confirmed in Rumuokoro 🚀",
+  "A customer just scheduled express wash 💨",
+  "Laundry pickup booked in Old GRA 🧺",
+  "Family plan just activated 👨‍👩‍👧‍👦"
+];
+
+let i = 0;
+
+setInterval(() => {
+  document.getElementById("liveText").innerText = messages[i];
+  i = (i + 1) % messages.length;
+}, 3000);
+</script>
+
+
+<div id="exitPopup" class="popup">
+
+  <div class="popup-card glass-card">
+
+    <h2>Wait! Before You Go 👀</h2>
+
+    <p>
+      Get <b>FREE pickup delivery</b> on your first order today in Port Harcourt.
+      Don’t miss this limited offer.
+    </p>
+
+    <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Cartels-Wash,%20I%20want%20the%20free%20pickup%20offer"
+       class="cta-btn">
+
+      Claim Free Pickup
+
+    </a>
+
+    <button onclick="closePopup()">No Thanks</button>
+
+  </div>
+
+</div>
+<script>
+let shown = false;
+
+document.addEventListener("mouseout", function(e) {
+  if (e.clientY < 10 && !shown) {
+    document.getElementById("exitPopup").style.display = "flex";
+    shown = true;
+  }
+});
+
+function closePopup() {
+  document.getElementById("exitPopup").style.display = "none";
+}
+</script>
+
+
+<!-- LIVE COUNTER -->
+<section class="counter-section fade-in">
+  <div class="counter-box glass-card">
+    <h2 class="gradient-text">
+      <span id="orderCount">0</span>+ Orders Completed in Port Harcourt
+    </h2>
+    <p>Join hundreds of happy customers enjoying premium laundry service</p>
+  </div>
+</section>
+
+
+
+<div class="video-testimonials fade-in">
+
+  <h3 class="gradient-text">Real Customer Experiences</h3>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <div class="video-placeholder" data-video="video1">
+        <img src="https://via.placeholder.com/600x400/1a1f2e/ffffff?text=Customer+Video+1" alt="video placeholder">
+        <div class="play-btn">▶</div>
+      </div>
+      <p>“They saved me so much stress!”</p>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <div class="video-placeholder" data-video="video2">
+        <img src="https://via.placeholder.com/600x400/1a1f2e/ffffff?text=Customer+Video+2" alt="video placeholder">
+        <div class="play-btn">▶</div>
+      </div>
+      <p>“Fast and very reliable service.”</p>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <div class="video-placeholder" data-video="video3">
+        <img src="https://via.placeholder.com/600x400/1a1f2e/ffffff?text=Customer+Video+3" alt="video placeholder">
+        <div class="play-btn">▶</div>
+      </div>
+      <p>“My clothes have never looked better.”</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.video-placeholder').forEach(item => {
+  item.addEventListener('click', () => {
+    
+    // SAFE PLACEHOLDER BEHAVIOR
+    // Later you can replace this with real video logic
+
+    item.innerHTML = `
+      <div style="
+        height:220px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#fff;
+        background:#111827;
+        font-size:0.9rem;
+      ">
+        Video will play here (add file later)
+      </div>
+    `;
+  });
+});
+</script>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <h2 class="section-title gradient-text fade-in">
+    Our Premium Services
+  </h2>
+
+  <!-- SERVICE 1 -->
+  <div class="service-row fade-in">
+    <div class="service-image parallax">
+      <img src="videos/cheerful-african-american-woman-with-towels-hands-near-washing-machine-selfservice-laundry (1).jpg" alt="">
+    </div>
+
+    <div class="service-content glass-card fade-in">
+      <h3>Home Pickup & Delivery</h3>
+      <p>
+        Skip the stress. We come to your doorstep anywhere in Port Harcourt,
+        pick up your laundry, clean it to perfection, and deliver it fresh.
+      </p>
+      <a href="https://wa.link/yourlink" target="_blank" class="cta-btn small">
+        Schedule Pickup
+      </a>
+    </div>
+  </div>
+
+  <!-- SERVICE 2 -->
+  <div class="service-row reverse fade-in">
+    <div class="service-image parallax">
+      <img src="videos/expresswash (1).jpg" alt="">
+    </div>
+
+    <div class="service-content glass-card fade-in">
+      <h3>Express Wash</h3>
+      <p>
+        Need it fast? Our express service guarantees quick turnaround
+        without compromising on quality or freshness.
+      </p>
+      <a href="https://wa.link/yourlink" target="_blank" class="cta-btn small">
+        Get Express Service
+      </a>
+    </div>
+  </div>
+
+  <!-- SERVICE 3 -->
+  <div class="service-row fade-in">
+    <div class="service-image parallax">
+      <img src="videos/expresswash (2).jpg" alt="">
+    </div>
+
+    <div class="service-content glass-card fade-in">
+      <h3>Advanced Stain Removal</h3>
+      <p>
+        Tough stains? No problem. We use professional-grade techniques
+        to restore your clothes while preserving fabric quality.
+      </p>
+      <a href="https://wa.link/yourlink" target="_blank" class="cta-btn small">
+        Remove My Stains
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- SCRIPTS -->
+<script>
+/* FADE-IN OBSERVER */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
+
+/* PARALLAX EFFECT */
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.parallax img').forEach(img => {
+    const rect = img.getBoundingClientRect();
+    const speed = 0.15;
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const offset = rect.top * speed;
+      img.style.transform = `translateY(${offset}px) scale(1.05)`;
+    }
+  });
+});
+
+
+/* LIVE COUNTER */
+let countStarted = false;
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !countStarted) {
+      countStarted = true;
+
+      let count = 0;
+      const target = 1250;
+      const speed = 20;
+
+      const interval = setInterval(() => {
+        count += 10;
+        document.getElementById('orderCount').innerText = count;
+
+        if (count >= target) {
+          document.getElementById('orderCount').innerText = target;
+          clearInterval(interval);
+        }
+      }, speed);
+    }
+  });
+});
+
+counterObserver.observe(document.querySelector('.counter-section'));
+</script>
+
+
+
+<section class="testimonials" id="testimonials">
+
+  <h2 class="section-title gradient-text">
+    What Our Customers Say
+  </h2>
+
+  <!-- GOOGLE BADGE -->
+  <div class="google-badge">
+    <span>Google Rating: 4.9 ★★★★★</span>
+  </div>
+
+  <!-- SWIPER -->
+  <div class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+      <!-- CARD 1 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" class="avatar">
+          <h4>Chioma A.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Best laundry service in Port Harcourt. Super clean and fast!</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" class="avatar">
+          <h4>David K.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Pickup and delivery were seamless. Highly recommended.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" class="avatar">
+          <h4>Amaka O.</h4>
+          <div class="stars">★★★★★</div>
+          <p>They removed stains I thought were permanent. Amazing job.</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" class="avatar">
+          <h4>Michael E.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Very professional and reliable laundry service.</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/women/5.jpg" class="avatar">
+          <h4>Grace N.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Affordable family plan saved me so much money.</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/men/6.jpg" class="avatar">
+          <h4>Samuel T.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Always on time. Very consistent service quality.</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/women/7.jpg" class="avatar">
+          <h4>Joy U.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Clothes always smell fresh and feel brand new.</p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="swiper-slide">
+        <div class="testimonial-card glass-card">
+          <img src="https://randomuser.me/api/portraits/men/8.jpg" class="avatar">
+          <h4>Emeka C.</h4>
+          <div class="stars">★★★★★</div>
+          <p>Best laundry experience I’ve had in Port Harcourt.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+  </div>
+
+</section>
+
+
+
+<section class="promos" id="promos">
+
+  <h2 class="section-title gradient-text fade-in">
+    Exclusive Offers Designed to Save You More
+  </h2>
+
+  <p class="promo-sub fade-in">
+    Cartels-Wash adapts your offers based on demand — so you always get the best deal available.
+  </p>
+
+  <div class="promo-grid">
+
+    <div class="promo-card glass-card fade-in" data-type="referral">
+      <div class="promo-icon">🎁</div>
+      <h3>Refer & Earn Rewards</h3>
+      <p>Invite 5 friends and get FREE wash + bonuses.</p>
+      <a class="promo-btn whatsapp-btn">Claim Offer</a>
+    </div>
+
+    <div class="promo-card glass-card fade-in highlight" data-type="family">
+      <div class="promo-icon">👨‍👩‍👧‍👦</div>
+      <h3>Family Wash Plan</h3>
+      <p>Save more with weekly household laundry subscriptions.</p>
+      <a class="promo-btn whatsapp-btn">Get Plan</a>
+    </div>
+
+    <div class="promo-card glass-card fade-in" data-type="flex">
+      <div class="promo-icon">💳</div>
+      <h3>Wash Now, Pay Later</h3>
+      <p>Flexible laundry payments for busy customers.</p>
+      <a class="promo-btn whatsapp-btn">Start Now</a>
+    </div>
+
+  </div>
+
+  <!-- LIVE OFFER STATUS -->
+  <div class="offer-status glass-card fade-in">
+    🔥 Limited Offer Active: <span id="activeOffer">Family Wash Plan</span>
+  </div>
+
+</section>
+
+<script>
+
+const phone = "234XXXXXXXXXX";
+
+// Promo data (AI-like logic source)
+const promoData = {
+  referral: {
+    message: "Hi Cartels-Wash, I want to claim the Refer & Earn reward 🎁",
+    urgency: "🔥 Limited referral bonus active today!"
+  },
+  family: {
+    message: "Hi Cartels-Wash, I want the Family Wash subscription 👨‍👩‍👧‍👦",
+    urgency: "⚡ Most popular plan in Port Harcourt right now!"
+  },
+  flex: {
+    message: "Hi Cartels-Wash, I want Wash Now Pay Later option 💳",
+    urgency: "⏳ Flexible payment slots are limited today!"
+  }
+};
+
+let currentPromo = "family";
+
+// Attach WhatsApp links dynamically
+function updateWhatsAppLinks() {
+
+  document.querySelectorAll(".promo-card").forEach(card => {
+
+    const type = card.getAttribute("data-type");
+
+    const btn = card.querySelector(".whatsapp-btn");
+
+    btn.href =
+      "https://wa.me/" +
+      phone +
+      "?text=" +
+      encodeURIComponent(promoData[type].message);
+
+  });
+
+}
+
+// Rotate active promo (creates urgency psychology)
+function rotatePromo() {
+
+  const keys = Object.keys(promoData);
+
+  let index = 0;
+
+  setInterval(() => {
+
+    currentPromo = keys[index];
+
+    document.getElementById("activeOffer").innerText =
+      currentPromo.charAt(0).toUpperCase() + currentPromo.slice(1) + " Plan";
+
+    // highlight active card
+    document.querySelectorAll(".promo-card").forEach(card => {
+      card.classList.remove("active");
+      if (card.getAttribute("data-type") === currentPromo) {
+        card.classList.add("active");
+      }
+    });
+
+    index = (index + 1) % keys.length;
+
+  }, 4000);
+}
+
+// Smart hover tracking (behavior signal)
+document.querySelectorAll(".promo-card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    const type = card.getAttribute("data-type");
+    console.log("User interested in:", type);
+  });
+});
+
+// INIT
+updateWhatsAppLinks();
+rotatePromo();
+
+</script>
+
+
+<footer class="footer fade-in">
+
+  <div class="footer-container">
+
+    <!-- BRAND COLUMN -->
+    <div class="footer-brand glass-card">
+
+      <h2 class="gradient-text">Cartels-Wash</h2>
+
+      <p>
+        Port Harcourt’s most trusted laundry service delivering premium
+        home pickup, express wash, and stain removal solutions.
+      </p>
+
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Cartels-Wash,%20I%20want%20to%20book%20a%20pickup"
+         class="cta-btn small">
+
+        Book on WhatsApp
+
+      </a>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links glass-card">
+
+      <h3>Quick Links</h3>
+
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#promos">Promos</a>
+      <a href="#tracking">Live Tracking</a>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-contact glass-card">
+
+      <h3>Contact</h3>
+
+      <p>📍 No 25 National Street, Mile 3,Port Harcourt, Rivers State</p>
+      <p>📞 WhatsApp: +234 XXX XXX XXXX</p>
+      <p>⏰ Mon - Sun: 24 Hours</p>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+
+<p>© 2026 Cartels-Wash. All rights reserved.</p>
+
+  </div>
+
+</footer>
+
+
+<a href="https://wa.me/234XXXXXXXXXX?text=Hi%20Cartels-Wash,%20I%20want%20to%20book%20a%20pickup%20for%20laundry"
+   class="sticky-whatsapp"
+   target="_blank">
+
+  💬 Book Laundry Pickup Now
+
+</a>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
+});
+</script>
+</body>
+</html>
